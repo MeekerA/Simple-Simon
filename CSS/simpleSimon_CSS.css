@@ -1,0 +1,10 @@
+#gamesContainer {
+    border: solid black 2px;
+}
+
+.gameColorBox {
+    width: 125px;
+    height: 125px;
+    border: solid blue 1px;
+    margin: 20px;
+}
