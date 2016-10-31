@@ -1,10 +1,34 @@
+
 #gamesContainer {
-    border: solid black 2px;
+    border: solid black 3px;
+    width: 395px;
+    height: 395px;
 }
 
 .gameColorBox {
-    width: 125px;
-    height: 125px;
-    border: solid blue 1px;
-    margin: 20px;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
 }
+
+#redGameBox {
+    background-color: red;
+}
+
+#blueGameBox {
+    background-color: blue;
+
+}
+
+#greenGameBox {
+    background-color: green;
+
+}
+
+#yellowGameBox {
+    background-color: yellow;
+
+}
+
