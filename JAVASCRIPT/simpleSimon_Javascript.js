@@ -4,6 +4,8 @@
 
 "use strict";
 
+(function () {
+    
 var gameColorBoxs = $(".gameColorBox"); // all games color boxes
 var oneRedBox = $("#redGameBox"); // game color box
 var twoBlueBox = $("#blueGameBox"); // blue game color box
@@ -128,7 +130,6 @@ function showSimonsNumbers(arrayOfNumbers, timeBetweenNumbers1000) { // function
 // -------------- Start Button on Page Load ---------------
 
 gamesStartButton.click(function () {
-
     roundCounter = 1;
     playersInput = [];
     simpleSimonsInput = [];
@@ -145,5 +146,8 @@ gamesStartButton.click(function () {
     showSimonsNumbers(simpleSimonsInput, gamePlaySpeed);
 
     userAnimatesBox();
-
 });
+
+})();
+
+console.log("No Cheating!!!");
