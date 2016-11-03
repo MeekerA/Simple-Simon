@@ -11,13 +11,13 @@ var threeGreenBox = $("#greenGameBox"); //green game color box
 var fourYellowBox = $("#yellowGameBox"); //yellow game color box
 var gamesStartButton = $("#startGameButton"); // "Start New Game" button
 var buttonArea = $("#buttonArea"); // container that
-var gameInstructionText = $("#gameInstructionText");
+var gameInstructionText = $("#gameInstructionText"); //
 
 var simpleSimonsInput = [];
 var playersInput = [];
 var roundCounter = 1;
 var gamePlaySpeed = 1000; // games play speed // 1 sec between computers animation
-var counter = 0;
+var correctSequenceCounter = 0;
 
 
 // ----------------- Variable declaration above --------------------
@@ -51,8 +51,8 @@ function userAnimatesBox() { // controls players box animation // checks player 
                 }, 400);
                 playersInput.push(index + 1); // red = 1 // blue = 2 // green = 3 // yellow = 4
 
-                if (playersInput[counter] == simpleSimonsInput[counter]) { // checks players choice against games sequence
-                    counter++;
+                if (playersInput[correctSequenceCounter] == simpleSimonsInput[correctSequenceCounter]) { // checks players choice against games sequence
+                    correctSequenceCounter++;
                 } else {    // player lost need to add restart button !!
 
 
@@ -62,19 +62,19 @@ function userAnimatesBox() { // controls players box animation // checks player 
 
                     flashAllColorBoxes(gameColorBoxs); // flashes all color boxes
 
-                        gameInstructionText.html("That wasn't right..");
+                        gameInstructionText.html("That wasn't right...");
 
                         buttonArea.html("<h4>You Made it to Round: " + roundCounter + "</h4>");
 
                     }, 400)
                 }
 
-                if (simpleSimonsInput.length == counter) { // if players sequence = computers sequence
+                if (simpleSimonsInput.length == correctSequenceCounter) { // if players sequence = computers sequence
                     setTimeout(function () { // adds .4 sec delay to finish players animation
 
                         roundCounter++; // adds one to round counter
                         gamePlaySpeed -= 50; // reduces time between computer box animation
-                        counter = 0; // resets correct sequence counter to "0"
+                        correctSequenceCounter = 0; // resets correct sequence counter to "0"
                         playersInput = []; // clears players input
 
                         buttonArea.html("<h4>Round: " + roundCounter + "</h4>");
@@ -128,15 +128,14 @@ function showSimonsNumbers(arrayOfNumbers, timeBetweenNumbers1000) { // function
     }, timeBetweenNumbers1000);
 }
 
-
 // -------------- Start Button on Page Load ---------------
 
 gamesStartButton.click(function () {
 
     roundCounter = 1;
-
     playersInput = [];
     simpleSimonsInput = [];
+
     buttonArea.html("<h4>Round: " + roundCounter + "</h4>");
     gameInstructionText.html("");
 
@@ -152,22 +151,4 @@ gamesStartButton.click(function () {
 
 });
 
-// $("#restart").click(function() {
-//
-//     roundCounter = 1;
-//
-//     playersInput = [];
-//     simpleSimonsInput = [];
-//     buttonArea.html("<h4>Round: " + roundCounter + "</h4>");
-//     gameInstructionText.html("");
-//
-//     for (var i = 0; i < roundCounter + 1; i++) {
-//         var randomNumber = Math.floor((Math.random() * 4) + 1);
-//         simpleSimonsInput.push(randomNumber);
-//     }
-//     console.log(simpleSimonsInput);
-//
-//     showSimonsNumbers(simpleSimonsInput, gamePlaySpeed);
-//
-// });
 
