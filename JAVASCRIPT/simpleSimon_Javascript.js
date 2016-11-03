@@ -48,7 +48,7 @@ function userAnimatesBox() { // controls players box animation // checks player 
                     opacity: "1"
                 }).animate({
                     opacity: ".1"
-                }, 400);
+                }, 200);
                 playersInput.push(index + 1); // red = 1 // blue = 2 // green = 3 // yellow = 4
 
                 if (playersInput[correctSequenceCounter] == simpleSimonsInput[correctSequenceCounter]) { // checks players choice against games sequence

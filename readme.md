@@ -9,6 +9,7 @@ Game Key Features
 4. While "Simon" is showing his sequence to the player you cannot click on the color boxes until after he is done.
 5. 1. second delay between when Simon is done showing his sequence and player can repeat.
 6. No set levels, game is continuous loop until player loses.
+7. When player loses all color boxes flash, and text below game box changes.
 
 
 Things that need to be added/changed
