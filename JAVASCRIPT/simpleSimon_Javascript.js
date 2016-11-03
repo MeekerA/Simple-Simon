@@ -19,9 +19,7 @@ var roundCounter = 1;
 var gamePlaySpeed = 1000; // games play speed // 1 sec between computers animation
 var correctSequenceCounter = 0;
 
-
 // ----------------- Variable declaration above --------------------
-
 
 function simonAnimatesBox(animationBox, speed300) { // animation for computer playback.
     animationBox.animate({
@@ -54,13 +52,12 @@ function userAnimatesBox() { // controls players box animation // checks player 
                 if (playersInput[correctSequenceCounter] == simpleSimonsInput[correctSequenceCounter]) { // checks players choice against games sequence
                     correctSequenceCounter++;
                 } else {    // player lost need to add restart button !!
-
-
-                    setTimeout(function () { // 1 second delay to finish players animation
+                    
+                    setTimeout(function () { // .4 second delay to finish players box animation
 
                         turnClickCheckingOn = false; // turns player clicking off
 
-                    flashAllColorBoxes(gameColorBoxs); // flashes all color boxes
+                        flashAllColorBoxes(gameColorBoxs); // flashes all color boxes
 
                         gameInstructionText.html("That wasn't right...");
 
@@ -119,7 +116,7 @@ function showSimonsNumbers(arrayOfNumbers, timeBetweenNumbers1000) { // function
 
             clearInterval(SimpleSimonstimer); // stops the setInterval
 
-            setTimeout(function () { // adds .1 sec delay to finish computers animation
+            setTimeout(function () { // adds 1. sec delay to finish computers animation
                 gameInstructionText.html("Enter the sequence."); // changes text
                 turnClickCheckingOn = true; // turns clicking function on
 
@@ -151,4 +148,7 @@ gamesStartButton.click(function () {
 
 });
 
+for(var i = 0; i <= 10; i++) {
+    console.log(i);
+}
 
