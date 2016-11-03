@@ -52,7 +52,7 @@ function userAnimatesBox() { // controls players box animation // checks player 
                 if (playersInput[correctSequenceCounter] == simpleSimonsInput[correctSequenceCounter]) { // checks players choice against games sequence
                     correctSequenceCounter++;
                 } else {    // player lost need to add restart button !!
-                    
+
                     setTimeout(function () { // .4 second delay to finish players box animation
 
                         turnClickCheckingOn = false; // turns player clicking off
@@ -147,8 +147,3 @@ gamesStartButton.click(function () {
     userAnimatesBox();
 
 });
-
-for(var i = 0; i <= 10; i++) {
-    console.log(i);
-}
-
