@@ -5,7 +5,7 @@
 "use strict";
 
 (function () {
-    
+
 var gameColorBoxs = $(".gameColorBox"); // all games color boxes
 var oneRedBox = $("#redGameBox"); // game color box
 var twoBlueBox = $("#blueGameBox"); // blue game color box
@@ -95,7 +95,6 @@ function userAnimatesBox() { // controls players box animation // checks player 
     });
 }
 
-
 function showSimonsNumbers(arrayOfNumbers, timeBetweenNumbers1000) { // function shows player the computers sequence
     var i = 0; // variable increases for arrayOfNumbers[i] to move threw the array
     gameInstructionText.html("Watch the sequence.");
@@ -150,4 +149,4 @@ gamesStartButton.click(function () {
 
 })();
 
-console.log("No Cheating!!!");
+console.log("%c No Cheating!!!", "color: red; font-size: 50px; font-weight: bold; text-shadow: 1px 1px 1px black");
