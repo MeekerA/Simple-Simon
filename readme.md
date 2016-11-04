@@ -1,8 +1,8 @@
 
-Simple Simon Game Project.
+# Simple Simon Game Project.
 
 
-Game Key Features
+## Game Key Features
 
 1. Game starts with two colors in the sequence. *one is for whimps*
 2. Play speed increases by 50 milliseconds each round.
@@ -11,9 +11,10 @@ Game Key Features
 5. 1. second delay between when Simon is done showing his sequence and player can repeat.
 6. No set levels, game is continuous loop until player looses.
 7. When player loses all color boxes flash, and text below game box changes.
+8. Surprise in page console upon page load.
 
 
-Things that need to be added/changed
+## Things that need to be added/changed
 
 1. After game is over/Player has lost.. Need to make "Reset Button" -- only way to reset game is reload page.
 2. Add sound when button is "Clicked by user"
