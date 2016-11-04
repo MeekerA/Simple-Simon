@@ -43,7 +43,7 @@ var turnClickCheckingOn = false; // variable that can be turned on and off to co
 function userAnimatesBox() { // controls players box animation // checks player choice against games sequence
     gameColorBoxs.each(function (index, element) {
         $(element).click(function () {
-            if (turnClickCheckingOn == true) {
+            if (turnClickCheckingOn == true) { // when turn clicking in "ON"
                 $(element).css({ // user animation on click
                     opacity: "1"
                 }).animate({
@@ -149,4 +149,4 @@ gamesStartButton.click(function () {
 
 })();
 
-console.log("%c No Cheating!!!", "color: red; font-size: 50px; font-weight: bold; text-shadow: 1px 1px 1px black");
+console.log("%c You Shall Not Pass...", "color: red; font-size: 50px; font-weight: bold; text-shadow: 1px 1px 1px black");
